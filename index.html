@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dinner &amp; a Game – Home</title>
+
+    <link rel="preload" href="./tailwind.min.css" as="style" />
+    <link rel="stylesheet" href="./tailwind.min.css" media="all" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', ui-sans-serif, system-ui, sans-serif;
+        }
+
+        .textred {
+            color: #c91010;
+        }
+
+        .bgred {
+            background-color: #c91010;
+        }
+
+        .shield-fit {
+            position: relative;
+            background: url('./images/daag_fit.png') center/cover no-repeat #000;
+        }
+
+        .crowd-fit {
+            background-color: #000;
+            background-image: url('./images/crowd_fit.png');
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+        }
+
+        .crowd-fit::before,
+        .shield-fit::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: #000;
+            opacity: .7;
+            z-index: 0;
+        }
+
+        .crowd-fit>*,
+        .shield-fit>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        a[href="#"] {
+            color: inherit;
+            text-decoration: none;
+            cursor:not-allowed;
+        }
+    </style>
+    <script>
+        function offlineNotice(e) {
+            e.preventDefault();            // keep the link from reloading the page
+            alert("This page is offline temporarily, check back soon");
+        }
+    </script>
+      
+</head>
+
+<body class="bg-gray-100 text-gray-900 leading-relaxed">
+
+    <!-- ===== Sticky top bar ===== -->
+    <header class="fixed top-0 inset-x-0 z-50 py-3 bgred text-white shadow-md">
+        <nav class="max-w-6xl mx-auto flex justify-center space-x-10 text-lg font-semibold py-4">
+            <a href="#" class="active">Home</a>
+   
+            <a href="#" onclick="offlineNotice(event)">DaaGers</a>
+            <a href="#" onclick="offlineNotice(event)">Merch</a>
+            <a href="#" onclick="offlineNotice(event)">Contacts</a>
+        </nav>
+    </header>
+      
+
+    <!-- Spacer (matches white strip under archive bar) -->
+    <div class="h-16"></div>
+
+    <main>
+
+        <!-- ===== Hero (shield + intro) ===== -->
+        <section class="relative shield-fit mt-5">
+            <!-- dark veil -->
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <div class="relative z-10 max-w-5xl mx-auto px-6 py-16
+                        flex flex-col md:flex-row items-center md:gap-8 text-white">
+
+                <!-- shield -->
+                <img src="./images/shield.png" alt="Dinner &amp; a Game Shield"
+                    class="w-40 md:w-56 flex-shrink-0 mb-8 md:mb-0 drop-shadow-lg" />
+
+                <!-- blurb -->
+                <div class="text-center md:text-left max-w-prose">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+                        Welcome to Dinner and a Game
+                    </h2>
+                    <p class="leading-relaxed">
+                        Dinner and a Game started as most of these things do—as a home gaming
+                        group. We had a blast playing together and wanted to share that joy
+                        with others, so we created a podcast—and it grew from there. Now we
+                        create content to support our geek and gaming community. <br><br>At Dinner and
+                        a Game we will always save you a seat at the table.
+                    </p>
+                </div>
+            </div>
+        </section>
+  
+  
+
+        <!-- ===== Icon links ===== -->
+        <section class="max-w-6xl mx-auto px-4 py-20 grid gap-14 md:grid-cols-3 text-center text-lg hidden">
+            <!-- Cast -->
+            <div>
+                <div class="text-blue-700 text-3xl mb-4"><i class="fas fa-users"></i></div>
+                <p class="font-semibold mb-1">Want to meet the members of Daag?</p>
+                <a href="#" class="text-blue-700 font-semibold hover:underline">Meet our cast and crew</a>
+            </div>
+            <!-- Schedule -->
+            <div>
+                <div class="text-blue-700 text-3xl mb-4"><i class="fas fa-calendar"></i></div>
+                <p class="font-semibold mb-1">You will find our schedule for<br />our games here..</p>
+                <a href="#" class="text-blue-700 font-semibold hover:underline">Read more</a>
+            </div>
+            <!-- Merch -->
+            <div>
+                <div class="text-blue-700 text-3xl mb-4"><i class="fas fa-shopping-bag"></i></div>
+                <p class="font-semibold mb-1">DaaG&nbsp;Merch&nbsp;Land can be found here!</p>
+                <a href="#" class="text-blue-700 font-semibold hover:underline">Let us equip your geek life</a>
+            </div>
+        </section>
+
+        <!-- ===== Shows / Events ===== -->
+        <section class="max-w-6xl mx-auto px-4 py-20 space-y-16" id="shows">
+
+            <!-- Emerald Sanctums -->
+            <div class="flex flex-col md:flex-row md:items-start gap-8">
+                <img src="images/event_1.png" alt="Emerald Sanctums artwork" class="w-full md:w-56 lg:w-64 rounded shadow" />
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-1">
+                        Emerald Sanctums
+                    </h3>
+                    <p class="font-semibold mb-4">
+                        Tuesdays&nbsp;7:30 PM CST on Twitch or our other streams
+                    </p>
+                    <p>
+                        How do you get a ADHD werewolf, a felon, a noble, poly fae with 3 spouses, a 300 year old weregator and a former Wizard
+                        Lizard to save the world? Find out every Tuesday evening with our World of Darkness Multi-Splat game. Join our found
+                        family as they try and keep each other safe in the Emerald Sanctums.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kingdoms of Mist -->
+            <div class="flex flex-col md:flex-row md:items-start gap-8">
+                <img src="images/event_2.jpg" alt="Kingdoms of Mist artwork" class="w-full md:w-56 lg:w-64 rounded shadow" />
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-1">
+                        Kingdoms of Mist
+                    </h3>
+                    <p class="font-semibold mb-4">
+                        Wednesdays&nbsp;8 PM CST on Twitch or our other streams
+                    </p>
+                    <p>
+                        A new Campaign Setting being developed by Dinner and a Game! Come join our players as we explore new world's and try and
+                        learn the secrets of The Mistmother to save the Kingdoms of Mist.
+                    </p>
+                </div>
+            </div>
+
+            <!-- The Walking Dead Jazz Funeral -->
+            <div class="flex flex-col md:flex-row md:items-start gap-8">
+                <img src="images/event_3.jpg" alt="Walking Dead Jazz Funeral artwork"
+                    class="w-full md:w-56 lg:w-64 rounded shadow" />
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-1">
+                        The Walking Dead Jazz Funeral
+                    </h3>
+                    <p class="font-semibold mb-4">
+                        Every other Friday&nbsp;8 PM CST on Twitch or our other streams
+                    </p>
+                    <p>
+                        In the Big Easy it's not always a party. When the dead walk and the swamp wants to take it's land back it will be time
+                        for a Jazz Funeral. Join us as we play a game that pushes the limits of your comfort. Be warned this is a very adult
+                        themed show with strong horror themes.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Open Source life, Big Dev Dreams -->
+            <div class="flex flex-col md:flex-row md:items-start gap-8">
+                <img src="images/event_4.png" alt="Open Source Life, Big Dev Dreams artwork"
+                    class="w-full md:w-56 lg:w-64 rounded shadow" />
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-1">
+                        Open Source Life, Big Dev Dreams
+                    </h3>
+                    <p class="font-semibold mb-4">
+                        Every other Friday&nbsp;8 PM CST on Twitch or our other streams
+                    </p>
+                    <p>
+                        Nightcity is no joke. You gonna make your mark or you gonna be a mark on the street? They gonna eat you alive or you
+                        gonna get ate? This is where Cyberpunk 2077 started with the TTRPG! Join us as we play Cyber Punk Red the latest edition
+                        of the TTRPG as our edgerunners do their best to cut their own legend out of the shady back streets of Nightcity.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+ 
+        
+        <!-- ===== Stats strip ===== -->
+        <section class="relative">
+            <!-- background -->
+            <div class="absolute inset-0 bg-cover bg-center crowd-fit"></div>
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <div class="relative z-10 max-w-6xl mx-auto px-4 py-16 grid gap-8 md:grid-cols-3 text-center text-white">
+                <div>
+                    <p class="text-4xl font-extrabold mb-1">1300+</p>
+                    <p class="font-semibold">Hours of Streamed Content</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-extrabold mb-1">20</p>
+                    <p class="font-semibold">Different games and shows</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-extrabold mb-1">6</p>
+                    <p class="font-semibold">Licensed merchandise lines</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bgred text-white tracking-wide">
+        <div class="max-w-6xl mx-auto px-4 py-16 grid gap-12 md:grid-cols-3">
+            <!-- left -->
+            <div>
+                <h3 class="font-extrabold text-lg mb-2">DINNER AND A GAME</h3>
+                <p class="text-sm mb-6">© 2025&nbsp;<a href="https://dinnerandagame.net"
+                        class="underline">dinnerandagame.net</a></p>
+            </div>
+
+            <!-- contact -->
+            <div class="text-sm leading-6">
+                <h4 class="font-bold mb-2">How to find us</h4>
+                <p>Address:<br />
+                    DaaG&nbsp;House<br />
+                    407&nbsp;Old&nbsp;Springtown&nbsp;Rd&nbsp;STE&nbsp;220<br />
+                    Springtown, TX 76082<br />USA</p>
+                <p class="mt-3">Phone: 817 220 3539<br />
+                    Email: <a href="mailto:contact@dinnerandagame.net">contact@dinnerandagame.net</a></p>
+            </div>
+
+            <!-- socials -->
+            <div>
+                <h4 class="font-bold mb-4 text-sm">You will find us at…</h4>
+                <div class="flex space-x-4 text-2xl">
+                    <a href="https://www.facebook.com/DinnerandaGame" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitch.tv/thedinnerandagame" target="_blank" rel="noopener"><i class="fab fa-twitch"></i></a>
+                    <a href="https://www.youtube.com/channel/UCEIlig3diboBUe3UW1Aijug" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/dinner_game" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.tiktok.com/@dinnerandagame" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/dinnerandagame/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
