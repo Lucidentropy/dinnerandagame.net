@@ -67,16 +67,16 @@
         a[href="#"] {
             color: inherit;
             text-decoration: none;
-            cursor:not-allowed;
+            cursor: not-allowed;
         }
     </style>
     <script>
         function offlineNotice(e) {
-            e.preventDefault();            // keep the link from reloading the page
+            e.preventDefault();
             alert("This page is offline temporarily, check back soon");
         }
     </script>
-      
+
 </head>
 
 <body class="bg-gray-100 text-gray-900 leading-relaxed">
@@ -85,19 +85,17 @@
     <header class="fixed top-0 inset-x-0 z-50 py-3 bgred text-white shadow-md">
         <nav class="max-w-6xl mx-auto flex justify-center space-x-10 text-lg font-semibold py-4">
             <a href="#" class="active">Home</a>
-   
-            <a href="#" onclick="offlineNotice(event)">DaaGers</a>
+            <a href="#shows">Events</a>
+            <a href="#daagers">DaaGers</a>
             <a href="#" onclick="offlineNotice(event)">Merch</a>
-            <a href="#" onclick="offlineNotice(event)">Contacts</a>
         </nav>
     </header>
-      
+
 
     <!-- Spacer (matches white strip under archive bar) -->
     <div class="h-16"></div>
 
     <main>
-
         <!-- ===== Hero (shield + intro) ===== -->
         <section class="relative shield-fit mt-5">
             <!-- dark veil -->
@@ -107,8 +105,7 @@
                         flex flex-col md:flex-row items-center md:gap-8 text-white">
 
                 <!-- shield -->
-                <img src="./images/shield.png" alt="Dinner &amp; a Game Shield"
-                    class="w-40 md:w-56 flex-shrink-0 mb-8 md:mb-0 drop-shadow-lg" />
+                <img src="./images/shield.png" alt="Dinner &amp; a Game Shield" class="w-40 md:w-56 flex-shrink-0 mb-8 md:mb-0 drop-shadow-lg" />
 
                 <!-- blurb -->
                 <div class="text-center md:text-left max-w-prose">
@@ -125,8 +122,6 @@
                 </div>
             </div>
         </section>
-  
-  
 
         <!-- ===== Icon links ===== -->
         <section class="max-w-6xl mx-auto px-4 py-20 grid gap-14 md:grid-cols-3 text-center text-lg hidden">
@@ -152,7 +147,14 @@
 
         <!-- ===== Shows / Events ===== -->
         <section class="max-w-6xl mx-auto px-4 py-20 space-y-16" id="shows">
-
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+                    Events and Shows
+                </h2>
+                <p class="max-w-3xl mx-auto mb-16">
+                    The games we play.
+                </p>
+            </div>
             <!-- Emerald Sanctums -->
             <div class="flex flex-col md:flex-row md:items-start gap-8">
                 <img src="images/event_1.png" alt="Emerald Sanctums artwork" class="w-full md:w-56 lg:w-64 rounded shadow" />
@@ -162,11 +164,13 @@
                         Emerald Sanctums
                     </h3>
                     <p class="font-semibold mb-4">
-                        Tuesdays&nbsp;7:30 PM CST on Twitch or our other streams
+                        Tuesdays&nbsp;7:30 PM CST on Twitch or our other streams
                     </p>
                     <p>
-                        How do you get a ADHD werewolf, a felon, a noble, poly fae with 3 spouses, a 300 year old weregator and a former Wizard
-                        Lizard to save the world? Find out every Tuesday evening with our World of Darkness Multi-Splat game. Join our found
+                        How do you get a ADHD werewolf, a felon, a noble, poly fae with 3 spouses, a 300 year old
+                        weregator and a former Wizard
+                        Lizard to save the world? Find out every Tuesday evening with our World of Darkness Multi-Splat
+                        game. Join our found
                         family as they try and keep each other safe in the Emerald Sanctums.
                     </p>
                 </div>
@@ -181,10 +185,11 @@
                         Kingdoms of Mist
                     </h3>
                     <p class="font-semibold mb-4">
-                        Wednesdays&nbsp;8 PM CST on Twitch or our other streams
+                        Wednesdays&nbsp;8 PM CST on Twitch or our other streams
                     </p>
                     <p>
-                        A new Campaign Setting being developed by Dinner and a Game! Come join our players as we explore new world's and try and
+                        A new Campaign Setting being developed by Dinner and a Game! Come join our players as we explore
+                        new world's and try and
                         learn the secrets of The Mistmother to save the Kingdoms of Mist.
                     </p>
                 </div>
@@ -192,19 +197,20 @@
 
             <!-- The Walking Dead Jazz Funeral -->
             <div class="flex flex-col md:flex-row md:items-start gap-8">
-                <img src="images/event_3.jpg" alt="Walking Dead Jazz Funeral artwork"
-                    class="w-full md:w-56 lg:w-64 rounded shadow" />
+                <img src="images/event_3.jpg" alt="Walking Dead Jazz Funeral artwork" class="w-full md:w-56 lg:w-64 rounded shadow" />
 
                 <div class="flex-1">
                     <h3 class="text-2xl font-bold text-blue-600 mb-1">
-                        The Walking Dead Jazz Funeral
+                        The Walking Dead Jazz Funeral
                     </h3>
                     <p class="font-semibold mb-4">
-                        Every other Friday&nbsp;8 PM CST on Twitch or our other streams
+                        Every other Friday&nbsp;8 PM CST on Twitch or our other streams
                     </p>
                     <p>
-                        In the Big Easy it's not always a party. When the dead walk and the swamp wants to take it's land back it will be time
-                        for a Jazz Funeral. Join us as we play a game that pushes the limits of your comfort. Be warned this is a very adult
+                        In the Big Easy it's not always a party. When the dead walk and the swamp wants to take it's
+                        land back it will be time
+                        for a Jazz Funeral. Join us as we play a game that pushes the limits of your comfort. Be warned
+                        this is a very adult
                         themed show with strong horror themes.
                     </p>
                 </div>
@@ -212,27 +218,306 @@
 
             <!-- Open Source life, Big Dev Dreams -->
             <div class="flex flex-col md:flex-row md:items-start gap-8">
-                <img src="images/event_4.png" alt="Open Source Life, Big Dev Dreams artwork"
-                    class="w-full md:w-56 lg:w-64 rounded shadow" />
+                <img src="images/event_4.png" alt="Open Source Life, Big Dev Dreams artwork" class="w-full md:w-56 lg:w-64 rounded shadow" />
 
                 <div class="flex-1">
                     <h3 class="text-2xl font-bold text-blue-600 mb-1">
-                        Open Source Life, Big Dev Dreams
+                        Open Source Life, Big Dev Dreams
                     </h3>
                     <p class="font-semibold mb-4">
-                        Every other Friday&nbsp;8 PM CST on Twitch or our other streams
+                        Every other Friday&nbsp;8 PM CST on Twitch or our other streams
                     </p>
                     <p>
-                        Nightcity is no joke. You gonna make your mark or you gonna be a mark on the street? They gonna eat you alive or you
-                        gonna get ate? This is where Cyberpunk 2077 started with the TTRPG! Join us as we play Cyber Punk Red the latest edition
-                        of the TTRPG as our edgerunners do their best to cut their own legend out of the shady back streets of Nightcity.
+                        Nightcity is no joke. You gonna make your mark or you gonna be a mark on the street? They gonna
+                        eat you alive or you
+                        gonna get ate? This is where Cyberpunk 2077 started with the TTRPG! Join us as we play Cyber
+                        Punk Red the latest edition
+                        of the TTRPG as our edgerunners do their best to cut their own legend out of the shady back
+                        streets of Nightcity.
                     </p>
                 </div>
             </div>
-
         </section>
- 
+
+
+        <!-- =========================================================
+             DaaGer Crew
+        ========================================================= -->
+        <section id="daagers" class="bg-gray-100 py-24">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+                    Meet our DaaGer Crew!
+                </h2>
+                <p class="max-w-3xl mx-auto mb-16">
+                    These people are the heart and soul of our Dinner and a Game creative team—from players to storytellers,
+                    they're the reason DaaG's stories feel so personal, relatable, and amazing.
+                    We introduce you to the DaaG Family:
+                </p>
         
+                <!-- Grid -->
+                <div class="grid gap-16 sm:grid-cols-2 lg:grid-cols-3">
+        
+                    <!-- 1 ▸ Sphinx Akashaa -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://beacons.ai/sphinxakashaa" target="_blank" rel="noopener">
+                            <img src="./images/crew/sphinx.png" alt="Sphinx Akashaa" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Sphinx Akashaa</h3>
+                        <p class="text-sm leading-relaxed">
+                            A self-proclaimed Champion of Bards, Sphinx is most definitely a Neurodivergent,
+                            Queer, CRIT Award Nominated, BIPOC TTRPG Player, Storyteller, Musician, Writer,
+                            and Content Creator walking the Storied Path. He's successfully completed a
+                            6-year-long Eberron AP podcast and is soon launching a new AP TTRPG Anthology
+                            Podcast called <i>The Everbright Archive!</i>
+                        </p>
+                    </div>
+        
+                    <!-- 2 ▸ FountainPen Femme -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/FountainPenFemme" target="_blank" rel="noopener">
+                            <img src="./images/crew/fountainpen.jpg" alt="FountainPen Femme" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">FountainPen Femme</h3>
+                        <p class="text-sm leading-relaxed">
+                            Milagros (She/They) is a queer, intersex, Latine/x, neurodivergent and disabled
+                            author, actor, and TTRPG player. Tank Lesbian main, meticulous note-taker—even
+                            in one-shots!—and based in New York, they juggle <em>twenty</em> projects when
+                            not scrap-booking or reading tarot.
+                        </p>
+                    </div>
+        
+                    <!-- 3 ▸ Markov_and_co -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://beacons.ai/markovandco" target="_blank" rel="noopener">
+                            <img src="./images/crew/markov.png" alt="Markov_and_co" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Markov_and_co</h3>
+                        <p class="text-sm leading-relaxed">
+                            Markov.and.Co—Sam for short—is a TTRPG, cosplay, and gaming enthusiast with a
+                            past in military service, theatre, and improv. An AuADHD-fueled creator famous
+                            for gut-wrenching emotional dives, endless innuendo, and lightning-fast,
+                            outside-the-box plans.
+                        </p>
+                    </div>
+        
+                    <!-- 4 ▸ SelkieCove -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/SelkieCove" target="_blank" rel="noopener">
+                            <img src="./images/crew/selkie.webp" alt="SelkieCove" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">SelkieCove</h3>
+                        <p class="text-sm leading-relaxed">
+                            Delving into all things creepy-and-cute, Selkie Cove (He/They) is a queer,
+                            neurodivergent, disabled TTRPG player and creator. Eldritch darkness meets pastel
+                            kawaii in 3–5 streams per week—<em>and</em> they're always scouting new
+                            projects.
+                        </p>
+                    </div>
+        
+                    <!-- 5 ▸ Wrenound -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/Wrenound" target="_blank" rel="noopener">
+                            <img src="./images/crew/wrenound.webp" alt="Wrenound" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Wrenound</h3>
+                        <p class="text-sm leading-relaxed">
+                            Wren (They/Them) is a queer, Latino, non-binary larp/TTRPG/card-game designer,
+                            maestro of disaster, and chaos conduit. Expect deep personal engagement,
+                            emotional content, and joyful wreckage in every game.
+                        </p>
+                    </div>
+        
+                    <!-- 6 ▸ Starshard.Stories -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://beacons.ai/starshard.stories" target="_blank" rel="noopener">
+                            <img src="./images/crew/profile_starshard.stories.png" alt="Starshard.Stories" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Starshard.Stories</h3>
+                        <p class="text-sm leading-relaxed">
+                            Disabled demigirl content creator, cosplayer, storyteller, and lore-diver with
+                            24 years of tabletop under her belt. When she's not fussing at tiny cat Bean, she
+                            giggles—or cries—her way through streams alongside her spouse.
+                        </p>
+                    </div>
+        
+                    <!-- 7 ▸ Ladee_Vamp -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/Ladee_vamp" target="_blank" rel="noopener">
+                            <img src="./images/crew/ladeevamp.webp" alt="Ladee_Vamp" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Ladee Vamp</h3>
+                        <p class="text-sm leading-relaxed">
+                            Kassy (She/Her) is a Minnesota-based cosplayer and 5e devotee. Chronically
+                            procrastinating, neuro-spicy, and incapable of self-care—but always ready to
+                            dive head-first into storytelling.
+                        </p>
+                    </div>
+        
+                    <!-- 8 ▸ Myss_Lyss2 -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://beacons.ai/myss_lyss" target="_blank" rel="noopener">
+                            <img src="./images/crew/profile_myss_lyss.webp" alt="Myss_Lyss2" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Myss Lyss 2</h3>
+                        <p class="text-sm leading-relaxed">
+                            Cosplayer, DM, and chaos engine. From “level-up lesbian” to “cutest bean”
+                            werewolf, Myss_Lyss keeps players—and GMs—on their toes.
+                        </p>
+                    </div>
+        
+                    <!-- 9 ▸ The_Hipster_GM -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://beacons.ai/the_hipster_gm" target="_blank" rel="noopener">
+                            <img src="./images/crew/profile_thehipsterviking.jpg" alt="The Hipster GM" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">The Hipster GM</h3>
+                        <p class="text-sm leading-relaxed">
+                            Coco (They/Them) is a lore-loving content creator famed for ttrpg, autism, and
+                            nerd culture videos. When not smithing metal scrap into art or wandering forest
+                            trails, you'll find them playing themselves in <em>Jazz Funeral</em>.
+                        </p>
+                    </div>
+        
+                    <!-- 10 ▸ KelticWyvernKing -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/KelticWyvernKing" target="_blank" rel="noopener">
+                            <img src="./images/crew/kelticwyvernking.webp" alt="KelticWyvernKing" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">KelticWyvernKing</h3>
+                        <p class="text-sm leading-relaxed">
+                            TTRPG player/GM and content creator (He/Him). On-screen in one DaaG show and
+                            running an ever-growing roster of games on his own channel.
+                        </p>
+                    </div>
+        
+                    <!-- 11 ▸ Vixie -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/pocketdragonpub" target="_blank" rel="noopener">
+                            <img src="./images/crew/vixie.webp" alt="Vixie" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Vixie</h3>
+                        <p class="text-sm leading-relaxed">
+                            Your friendly neighborhood GM and player. Latina, grant recipient, and Games on
+                            Demand GM for multiple 2024 cons—producing actual-play content at Pocket Dragon
+                            Pub and DaaG alike.
+                        </p>
+                    </div>
+        
+                    <!-- 12 ▸ GeekGirl Lyssa -->
+                    <div class="flex flex-col items-center text-center">
+                        <!-- no public profile link provided -->
+                        <img src="./images/crew/geekgirl_lyssa.png" alt="GeekGirl Lyssa" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        <h3 class="text-xl font-bold mb-4">GeekGirl Lyssa</h3>
+                        <p class="text-sm leading-relaxed">
+                            Demifemme, queer content creator. Streams games and community chats on Twitch,
+                            shares gaming &amp; cosplay snippets on TikTok, and champions social equality.
+                        </p>
+                    </div>
+        
+                    <!-- 13 ▸ DiceGoblinBlackCat -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/dicegoblinblackcat" target="_blank" rel="noopener">
+                            <img src="./images/crew/dicegoblin.webp" alt="DiceGoblinBlackCat" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">DiceGoblin BlackCat</h3>
+                        <p class="text-sm leading-relaxed">
+                            Dice maker with goblin energy—appearing in campaigns and one-shots alike. When
+                            not rolling math rocks she's disrupting the patriarchy and plotting an escape
+                            from Texas to cooler climes.
+                        </p>
+                    </div>
+        
+                    <!-- 14 ▸ Hythrall -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/Hythrall" target="_blank" rel="noopener">
+                            <img src="./images/crew/hythrall.webp" alt="Hythrall" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Hythrall</h3>
+                        <p class="text-sm leading-relaxed">
+                            TTRPG creator and cosplayer (She/Her) who conjures detailed OCs like magic. Catch
+                            her every other Friday in <em>Open Source Life, Big Dev Dreams</em> playing the
+                            stoic Chryst.
+                        </p>
+                    </div>
+        
+                    <!-- 15 ▸ Diamond Lynn -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./images/crew/diamond_lynn.png" alt="Diamond Lynn" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        <h3 class="text-xl font-bold mb-4">Diamond Lynn</h3>
+                        <p class="text-sm leading-relaxed">
+                            All-round TTRPG experience—AP performer, setting writer, schedule wrangler, and
+                            Keeper of Spines. Diamond keeps the DaaG machine running.
+                        </p>
+                    </div>
+        
+                    <!-- 16 ▸ Shepard -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/Druidgeek" target="_blank" rel="noopener">
+                            <img src="./images/crew/shepard.webp" alt="Shepard" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Shepard</h3>
+                        <p class="text-sm leading-relaxed">
+                            Twenty-three, non-binary, and perpetually crying over fictional characters.
+                            Shepard writes short stories, edits video, and wants every table to roll dice
+                            and tell fun stories.
+                        </p>
+                    </div>
+        
+                    <!-- 17 ▸ Mark J -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://twitter.com/morrthemerri_er" target="_blank" rel="noopener">
+                            <img src="./images/crew/mark_j.jpg" alt="Mark J" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">Mark J</h3>
+                        <p class="text-sm leading-relaxed">
+                            40-year-old boy, actual-play producer, writer, and founding member of Apochromatic
+                            Unlimited. Host of the <i>nOne-shOt with Mark J</i> podcast, uplifting BIPOC in
+                            TTRPG spaces.
+                        </p>
+                    </div>
+        
+                    <!-- 18 ▸ MrDaaGShow -->
+                    <div class="flex flex-col items-center text-center">
+                        <!-- no public profile link -->
+                        <img src="./images/crew/mr_daagshow.png" alt="MrDaaGShow" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        <h3 class="text-xl font-bold mb-4">MrDaaGShow</h3>
+                        <p class="text-sm leading-relaxed">
+                            Founder of the feast. Ray (He/Him) is older than D&amp;D itself and still eager
+                            to lecture after exactly four minutes. He launched DaaG to share the joy of this
+                            hobby and give back to the community.
+                        </p>
+                    </div>
+        
+                    <!-- 19 ▸ MrsDaaGShow -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://linktr.ee/mara_txt" target="_blank" rel="noopener">
+                            <img src="./images/crew/mrs_daagshow.png" alt="MrsDaaGShow" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">MrsDaaGShow</h3>
+                        <p class="text-sm leading-relaxed">
+                            Life-long gamer, introvert, and one of DaaG's two founders. She named the
+                            channel and has spent countless hours growing its social media presence (and
+                            Ray is madly in love with her).
+                        </p>
+                    </div>
+        
+                    <!-- 20 ▸ V-Tuber BishiBunny -->
+                    <div class="flex flex-col items-center text-center">
+                        <a href="https://www.twitch.tv/bishiebunny" target="_blank" rel="noopener">
+                            <img src="./images/crew/bishibunny.png" alt="BishiBunny" class="w-40 h-40 rounded-full object-cover shadow mb-6" />
+                        </a>
+                        <h3 class="text-xl font-bold mb-4">BishiBunny</h3>
+                        <p class="text-sm leading-relaxed">
+                            DaaG's only VTuber bun—disabled, queer, and always low on blood. Loves complex
+                            mechanics, intricate stories, and more campaigns than time allows.
+                        </p>
+                    </div>
+        
+                </div><!-- /grid -->
+            </div>
+        </section>
+  
+
         <!-- ===== Stats strip ===== -->
         <section class="relative">
             <!-- background -->
@@ -263,8 +548,7 @@
             <!-- left -->
             <div>
                 <h3 class="font-extrabold text-lg mb-2">DINNER AND A GAME</h3>
-                <p class="text-sm mb-6">© 2025&nbsp;<a href="https://dinnerandagame.net"
-                        class="underline">dinnerandagame.net</a></p>
+                <p class="text-sm mb-6">© 2025&nbsp;<a href="https://dinnerandagame.net" class="underline">dinnerandagame.net</a></p>
             </div>
 
             <!-- contact -->
